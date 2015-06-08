@@ -7,7 +7,7 @@ public class CellTest {
     public void checkIfCellisAlive() {
         Cell cell = new Cell(1);
 
-        int acctualCellState = cell.isAlive();
+        int acctualCellState = cell.stateOfCell();
 
         assertEquals(1, acctualCellState);
     }
@@ -16,7 +16,17 @@ public class CellTest {
     public void checkIfCellisNotAlive() {
         Cell cell = new Cell(0);
 
-        int acctualCellState = cell.isAlive();
+        int acctualCellState = cell.stateOfCell();
+
+        assertEquals(0, acctualCellState);
+    }
+
+    @Test
+    public void checkIfCellisKilledProperly() {
+        Cell cell = new Cell(1);
+        cell.killCell();
+
+        int acctualCellState = cell.stateOfCell();
 
         assertEquals(0, acctualCellState);
     }

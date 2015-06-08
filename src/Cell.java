@@ -6,7 +6,12 @@ class Cell {
         this.state = state;
     }
 
-    public int isAlive() {
+    public int stateOfCell() {
         return this.state;
     }
+
+    public void killCell() {
+        this.state = 0;
+    }
+
 }
