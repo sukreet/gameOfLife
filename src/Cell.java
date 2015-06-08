@@ -13,5 +13,8 @@ class Cell {
     public void killCell() {
         this.state = 0;
     }
+    public void makeCellAlive() {
+        this.state = 1;
+    }
 
 }

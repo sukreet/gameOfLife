@@ -30,4 +30,15 @@ public class CellTest {
 
         assertEquals(0, acctualCellState);
     }
+
+
+    @Test
+    public void checkIfCellisMadeAliveProperly() {
+        Cell cell = new Cell(0);
+        cell.makeCellAlive();
+
+        int acctualCellState = cell.stateOfCell();
+
+        assertEquals(1, acctualCellState);
+    }
 }
